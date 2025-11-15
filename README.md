@@ -1,196 +1,196 @@
 # FTTX-PROJECT
 
-Application web professionnelle de suivi et gestion du marché FTTx développée pour le Centre Urbain Nord de Tunis - Tunisie Télécom.
+Professional web application for FTTx market tracking and management developed for the North Urban Center of Tunis - Tunisia Telecom.
 
 ## 📋 Description
 
-FTTX-PROJECT est une plateforme web complète dédiée au suivi, à la gestion et au monitoring des opérations liées au marché FTTx (Fiber to the X). L'application offre une interface intuitive pour le suivi en temps réel des projets, la gestion administrative, la journalisation des opérations et le suivi des commissions.
+FTTX-PROJECT is a comprehensive web platform dedicated to tracking, managing, and monitoring operations related to the FTTx (Fiber to the X) market. The application provides an intuitive interface for real-time project tracking, administrative management, operation logging, and commission tracking.
 
-## ✨ Fonctionnalités Principales
+## ✨ Key Features
 
-### 🎯 Tableau de Bord Interactif
-- Vue d'ensemble en temps réel des projets FTTx
-- Statistiques et indicateurs de performance
-- Tableaux de bord personnalisés par rôle utilisateur
+### 🎯 Interactive Dashboard
+- Real-time overview of FTTx projects
+- Statistics and performance indicators
+- Customized dashboards by user role
 
-### 📊 Gestion Administrative
-- **Gestion de la Clientèle** : Administration complète des clients et de leurs informations
-- **Gestion SDR** : Suivi et administration des opérations SDR (Sales & Distribution)
-- **Gestion SPI** : Administration des opérations SPI (Service Provider Interface)
-- **Commission de Réception** : Suivi et gestion des commissions de réception
+### 📊 Administrative Management
+- **Customer Management**: Complete administration of clients and their information
+- **SDR Management**: Tracking and administration of SDR (Sales & Distribution) operations
+- **SPI Management**: Administration of SPI (Service Provider Interface) operations
+- **Commission Reception**: Tracking and management of reception commissions
 
-### 📝 Journal des Opérations
-- Journalisation complète de toutes les opérations effectuées
-- Historique détaillé avec horodatage
-- Système de logs pour traçabilité complète
-- Suppression sécurisée des logs (avec authentification)
+### 📝 Operations Journal
+- Complete logging of all operations performed
+- Detailed history with timestamps
+- Logging system for complete traceability
+- Secure log deletion (with authentication)
 
-### 🔐 Système d'Authentification
-- Connexion sécurisée avec différents niveaux d'accès
-- Authentification pour le journal administratif
-- Gestion des sessions utilisateur
-- Déconnexion sécurisée
+### 🔐 Authentication System
+- Secure login with different access levels
+- Authentication for administrative journal
+- User session management
+- Secure logout
 
-### 📄 Gestion des Documents
-- Visualisation de documents PDF
-- Upload et gestion de fichiers
-- Organisation des documents par projet
+### 📄 Document Management
+- PDF document viewing
+- File upload and management
+- Document organization by project
 
-## 🏗️ Architecture Technique
+## 🏗️ Technical Architecture
 
-### Stack Technologique
-- **Backend** : PHP 7.4+ avec architecture MVC
-- **Base de Données** : MySQL/MariaDB avec support PostgreSQL
-- **Frontend** : HTML5, CSS3, JavaScript (ES6+)
-- **Framework CSS** : Bootstrap 4.5.2
-- **Icons** : Font Awesome 5.15.4
-- **Connexion DB** : PDO (PHP Data Objects) pour la sécurité et la performance
+### Technology Stack
+- **Backend**: PHP 7.4+ with MVC architecture
+- **Database**: MySQL/MariaDB with PostgreSQL support
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **CSS Framework**: Bootstrap 4.5.2
+- **Icons**: Font Awesome 5.15.4
+- **DB Connection**: PDO (PHP Data Objects) for security and performance
 
-### Structure du Projet
+### Project Structure
 
 ```
 fttx_project/
-├── index.php                    # Page d'accueil principale
-├── dashboard.php                # Tableau de bord interactif
-├── database.php                 # Configuration de la base de données
-├── login.php                    # Page de connexion principale
-├── login_journal.php            # Connexion pour le journal admin
-├── logout.php                   # Déconnexion sécurisée
+├── index.php                    # Main homepage
+├── dashboard.php                # Interactive dashboard
+├── database.php                 # Database configuration
+├── login.php                    # Main login page
+├── login_journal.php            # Journal admin login
+├── logout.php                   # Secure logout
 │
-├── admin_clientele.php          # Administration de la clientèle
-├── admin_sdr.php                # Administration SDR
-├── admin_spi.php                # Administration SPI
-├── admin_commission_reception.php # Gestion des commissions
+├── admin_clientele.php          # Customer administration
+├── admin_sdr.php                # SDR administration
+├── admin_spi.php                # SPI administration
+├── admin_commission_reception.php # Commission management
 │
-├── journal.php                  # Journal des opérations
-├── initialize_journal_admin.php # Initialisation admin journal
-├── delete_log.php               # Suppression sécurisée des logs
+├── journal.php                  # Operations journal
+├── initialize_journal_admin.php # Journal admin initialization
+├── delete_log.php               # Secure log deletion
 │
-├── view_pdf.php                 # Visualisation de documents PDF
-├── serve_file.php               # Service de fichiers
-├── setup_users.php              # Configuration des utilisateurs
-├── supprimer_operation.php      # Suppression d'opérations
+├── view_pdf.php                 # PDF document viewing
+├── serve_file.php               # File service
+├── setup_users.php              # User configuration
+├── supprimer_operation.php      # Operation deletion
 │
 ├── css/
-│   └── style.css                # Styles personnalisés
-├── js/                          # Scripts JavaScript
-├── includes/                    # Fichiers inclus (headers, footers, etc.)
-└── uploads/                     # Fichiers téléchargés (images, documents)
+│   └── style.css                # Custom styles
+├── js/                          # JavaScript scripts
+├── includes/                    # Included files (headers, footers, etc.)
+└── uploads/                     # Uploaded files (images, documents)
 ```
 
 ## 🚀 Installation
 
-### Prérequis
-- PHP 7.4 ou supérieur
-- MySQL 5.7+ / MariaDB 10.3+ ou PostgreSQL 12+
-- Apache avec mod_rewrite activé (optionnel)
-- Extensions PHP : PDO, PDO_MySQL (ou PDO_PGSQL pour PostgreSQL), GD, ZIP
+### Prerequisites
+- PHP 7.4 or higher
+- MySQL 5.7+ / MariaDB 10.3+ or PostgreSQL 12+
+- Apache with mod_rewrite enabled (optional)
+- PHP Extensions: PDO, PDO_MySQL (or PDO_PGSQL for PostgreSQL), GD, ZIP
 
-### Installation Locale
+### Local Installation
 
-1. **Cloner le dépôt**
+1. **Clone the repository**
    ```bash
    git clone https://github.com/Nedim7050/FTTX-PROJECT.git
    cd FTTX-PROJECT
    ```
 
-2. **Configurer la base de données**
-   - Créez une base de données MySQL/PostgreSQL
-   - Importez le schéma de base de données si disponible
-   - Configurez les informations de connexion dans `database.php` ou via variables d'environnement
+2. **Configure the database**
+   - Create a MySQL/PostgreSQL database
+   - Import the database schema if available
+   - Configure connection information in `database.php` or via environment variables
 
-3. **Configurer les variables d'environnement**
-   - Créez un fichier `.env` à la racine (basé sur `.env.example` si disponible)
-   - Configurez les variables suivantes :
+3. **Configure environment variables**
+   - Create a `.env` file at the root (based on `.env.example` if available)
+   - Configure the following variables:
      ```
      DB_HOST=127.0.0.1
      DB_PORT=3306
      DB_NAME=fttx_project
      DB_USER=root
-     DB_PASSWORD=votre_mot_de_passe
+     DB_PASSWORD=your_password
      APP_ENV=development
      ```
 
-4. **Configurer les permissions**
-   - Assurez-vous que le dossier `uploads/` est accessible en écriture
+4. **Configure permissions**
+   - Ensure the `uploads/` folder is writable
    ```bash
    chmod -R 755 uploads/
    ```
 
-5. **Initialiser les utilisateurs**
-   - Exécutez `setup_users.php` pour configurer les comptes utilisateurs initiaux
+5. **Initialize users**
+   - Run `setup_users.php` to configure initial user accounts
 
 ## ⚙️ Configuration
 
-### Base de Données
+### Database
 
-L'application supporte automatiquement MySQL et PostgreSQL. La détection se fait automatiquement selon le port configuré :
+The application automatically supports MySQL and PostgreSQL. Detection is done automatically based on the configured port:
 - Port `3306` → MySQL
 - Port `5432` → PostgreSQL
 
-### Variables d'Environnement
+### Environment Variables
 
-L'application utilise des variables d'environnement pour la configuration, permettant une flexibilité entre développement et production :
+The application uses environment variables for configuration, allowing flexibility between development and production:
 
-| Variable | Description | Défaut |
-|----------|-------------|--------|
-| `DB_HOST` | Adresse du serveur de base de données | `127.0.0.1` |
-| `DB_PORT` | Port de la base de données | `3306` (MySQL) ou `5432` (PostgreSQL) |
-| `DB_NAME` | Nom de la base de données | `fttx_project` |
-| `DB_USER` | Utilisateur de la base de données | `root` |
-| `DB_PASSWORD` | Mot de passe de la base de données | (vide) |
-| `APP_ENV` | Environnement (development/production) | `development` |
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `DB_HOST` | Database server address | `127.0.0.1` |
+| `DB_PORT` | Database port | `3306` (MySQL) or `5432` (PostgreSQL) |
+| `DB_NAME` | Database name | `fttx_project` |
+| `DB_USER` | Database user | `root` |
+| `DB_PASSWORD` | Database password | (empty) |
+| `APP_ENV` | Environment (development/production) | `development` |
 
-## 🔒 Sécurité
+## 🔒 Security
 
-- **Connexions sécurisées** : Utilisation de PDO avec requêtes préparées pour prévenir les injections SQL
-- **Authentification** : Système de connexion avec gestion de sessions sécurisée
-- **Protection des fichiers sensibles** : Exclusion des fichiers `.env` via `.gitignore`
-- **Validation des entrées** : Validation et sanitization des données utilisateur
-- **Gestion des erreurs** : Messages d'erreur adaptés selon l'environnement (développement vs production)
+- **Secure connections**: Use of PDO with prepared statements to prevent SQL injection
+- **Authentication**: Login system with secure session management
+- **Sensitive file protection**: Exclusion of `.env` files via `.gitignore`
+- **Input validation**: Validation and sanitization of user data
+- **Error handling**: Error messages adapted according to environment (development vs production)
 
-## 📱 Interface Utilisateur
+## 📱 User Interface
 
-L'application propose une interface moderne et responsive :
-- Design responsive s'adaptant à tous les écrans (desktop, tablette, mobile)
-- Navigation intuitive avec menu de navigation clair
-- Animations CSS pour une meilleure expérience utilisateur
-- Interface cohérente avec la charte graphique Tunisie Télécom
+The application offers a modern and responsive interface:
+- Responsive design adapting to all screens (desktop, tablet, mobile)
+- Intuitive navigation with clear navigation menu
+- CSS animations for better user experience
+- Interface consistent with Tunisia Telecom brand guidelines
 
-## 🛠️ Développement
+## 🛠️ Development
 
-### Structure MVC
-L'application suit une architecture MVC (Model-View-Controller) :
-- **Model** : `database.php` - Gestion des données
-- **View** : Fichiers PHP avec HTML/PHP mélangé
-- **Controller** : Logique métier dans chaque fichier PHP
+### MVC Structure
+The application follows an MVC (Model-View-Controller) architecture:
+- **Model**: `database.php` - Data management
+- **View**: PHP files with mixed HTML/PHP
+- **Controller**: Business logic in each PHP file
 
-### Contribution
-Pour contribuer au projet :
-1. Forkez le dépôt
-2. Créez une branche pour votre fonctionnalité (`git checkout -b feature/ma-fonctionnalite`)
-3. Committez vos changements (`git commit -m 'Ajout de ma fonctionnalité'`)
-4. Pushez vers la branche (`git push origin feature/ma-fonctionnalite`)
-5. Ouvrez une Pull Request
+### Contributing
+To contribute to the project:
+1. Fork the repository
+2. Create a branch for your feature (`git checkout -b feature/my-feature`)
+3. Commit your changes (`git commit -m 'Add my feature'`)
+4. Push to the branch (`git push origin feature/my-feature`)
+5. Open a Pull Request
 
-## 📞 Support et Contact
+## 📞 Support and Contact
 
-Pour toute question, suggestion ou problème :
-- Créez une issue sur [GitHub](https://github.com/Nedim7050/FTTX-PROJECT/issues)
-- Contactez l'équipe de développement du Centre Urbain Nord
+For any questions, suggestions, or issues:
+- Create an issue on [GitHub](https://github.com/Nedim7050/FTTX-PROJECT/issues)
+- Contact the North Urban Center development team
 
-## 👨‍💻 Auteur
+## 👨‍💻 Author
 
 **Nedim Mejri**
 
-Développeur de l'application FTTX-PROJECT pour le Centre Urbain Nord de Tunis - Tunisie Télécom.
+Developer of the FTTX-PROJECT application for the North Urban Center of Tunis - Tunisia Telecom.
 
-## 📄 Licence
+## 📄 License
 
-Ce projet est la propriété exclusive de **Tunisie Télécom** et est destiné à un usage interne.
+This project is the exclusive property of **Tunisia Telecom** and is intended for internal use.
 
 ---
 
-**Développé avec ❤️ par Nedim Mejri pour le Centre Urbain Nord de Tunis - Tunisie Télécom**
+**Developed with ❤️ by Nedim Mejri for the North Urban Center of Tunis - Tunisia Telecom**
 
-© 2024 Tunisie Télécom. Tous droits réservés.
+© 2024 Tunisia Telecom. All rights reserved.

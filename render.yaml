@@ -2,13 +2,13 @@
 # Ce fichier permet de configurer tous vos services en une seule fois
 
 services:
-  # Service Web PHP
+  # Service Web PHP avec Docker
   - type: web
     name: fttx-project
-    runtime: php
+    runtime: docker
     plan: free
-    buildCommand: ""
-    startCommand: php -S 0.0.0.0:$PORT
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
     envVars:
       - key: APP_ENV
         value: production

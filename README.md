@@ -1,189 +1,190 @@
 # FTTX-PROJECT
 
-Application web de suivi du marché FTTx pour le Centre Urbain Nord de Tunis (Tunisie Télécom).
+Application web professionnelle de suivi et gestion du marché FTTx développée pour le Centre Urbain Nord de Tunis - Tunisie Télécom.
 
 ## 📋 Description
 
-Cette application PHP permet de suivre et gérer les projets FTTx avec un système de journalisation des opérations, un tableau de bord administratif et une gestion de clientèle.
+FTTX-PROJECT est une plateforme web complète dédiée au suivi, à la gestion et au monitoring des opérations liées au marché FTTx (Fiber to the X). L'application offre une interface intuitive pour le suivi en temps réel des projets, la gestion administrative, la journalisation des opérations et le suivi des commissions.
 
-## 🚀 Déploiement Cloud
+## ✨ Fonctionnalités Principales
 
-Ce projet est configuré pour être déployé sur différentes plateformes cloud PHP. Voici les options recommandées :
+### 🎯 Tableau de Bord Interactif
+- Vue d'ensemble en temps réel des projets FTTx
+- Statistiques et indicateurs de performance
+- Tableaux de bord personnalisés par rôle utilisateur
 
-### Option 1 : Render.com (⭐ Recommandé - Gratuit)
-1. Créez un compte sur [Render.com](https://render.com)
-2. Connectez votre dépôt GitHub
-3. Créez un nouveau "Web Service" PHP
-4. Configurez les variables d'environnement (voir ci-dessous)
-5. Créez une base de données MySQL PostgreSQL sur Render
-6. Déployez !
+### 📊 Gestion Administrative
+- **Gestion de la Clientèle** : Administration complète des clients et de leurs informations
+- **Gestion SDR** : Suivi et administration des opérations SDR (Sales & Distribution)
+- **Gestion SPI** : Administration des opérations SPI (Service Provider Interface)
+- **Commission de Réception** : Suivi et gestion des commissions de réception
 
-**Avantages :**
-- Plan gratuit disponible
-- Déploiement automatique depuis GitHub
-- Base de données incluse
+### 📝 Journal des Opérations
+- Journalisation complète de toutes les opérations effectuées
+- Historique détaillé avec horodatage
+- Système de logs pour traçabilité complète
+- Suppression sécurisée des logs (avec authentification)
 
-### Option 2 : Railway.app
-1. Créez un compte sur [Railway.app](https://railway.app)
-2. Connectez votre dépôt GitHub
-3. Créez un nouveau projet
-4. Ajoutez un service PHP et une base de données MySQL
-5. Configurez les variables d'environnement
-6. Déployez !
+### 🔐 Système d'Authentification
+- Connexion sécurisée avec différents niveaux d'accès
+- Authentification pour le journal administratif
+- Gestion des sessions utilisateur
+- Déconnexion sécurisée
 
-### Option 3 : Heroku
-1. Installez [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
-2. Créez un compte sur [Heroku](https://heroku.com)
-3. Créez une nouvelle application
-4. Ajoutez le buildpack PHP : `heroku buildpacks:set heroku/php`
-5. Ajoutez une base de données ClearDB MySQL
-6. Configurez les variables d'environnement
-7. Déployez : `git push heroku main`
+### 📄 Gestion des Documents
+- Visualisation de documents PDF
+- Upload et gestion de fichiers
+- Organisation des documents par projet
 
-### Option 4 : DigitalOcean App Platform
-1. Créez un compte sur [DigitalOcean](https://www.digitalocean.com)
-2. Connectez votre dépôt GitHub
-3. Créez une nouvelle App
-4. Sélectionnez PHP comme runtime
-5. Ajoutez une base de données MySQL
-6. Configurez les variables d'environnement
+## 🏗️ Architecture Technique
 
-## 🔧 Configuration
+### Stack Technologique
+- **Backend** : PHP 7.4+ avec architecture MVC
+- **Base de Données** : MySQL/MariaDB avec support PostgreSQL
+- **Frontend** : HTML5, CSS3, JavaScript (ES6+)
+- **Framework CSS** : Bootstrap 4.5.2
+- **Icons** : Font Awesome 5.15.4
+- **Connexion DB** : PDO (PHP Data Objects) pour la sécurité et la performance
 
-### Variables d'environnement requises
-
-Configurez ces variables dans votre panneau d'hébergement cloud :
-
-```
-DB_HOST=votre-hote-db
-DB_PORT=3306
-DB_NAME=votre-nom-db
-DB_USER=votre-utilisateur-db
-DB_PASSWORD=votre-mot-de-passe-db
-APP_ENV=production
-```
-
-### Configuration locale
-
-1. Copiez le fichier `.env.example` en `.env`
-2. Modifiez les valeurs selon votre environnement local
-3. Assurez-vous que votre base de données MySQL est configurée
-
-## 📁 Structure du projet
+### Structure du Projet
 
 ```
 fttx_project/
-├── admin_*.php          # Pages d'administration
-├── dashboard.php        # Tableau de bord
-├── database.php         # Configuration de la base de données
-├── index.php            # Page d'accueil
-├── journal.php          # Journal des opérations
-├── login*.php           # Pages de connexion
-├── css/                 # Fichiers CSS
-├── js/                  # Fichiers JavaScript
-├── uploads/             # Fichiers téléchargés
-├── includes/            # Fichiers inclus
-├── .htaccess           # Configuration Apache
-├── .gitignore          # Fichiers ignorés par Git
-└── README.md           # Ce fichier
+├── index.php                    # Page d'accueil principale
+├── dashboard.php                # Tableau de bord interactif
+├── database.php                 # Configuration de la base de données
+├── login.php                    # Page de connexion principale
+├── login_journal.php            # Connexion pour le journal admin
+├── logout.php                   # Déconnexion sécurisée
+│
+├── admin_clientele.php          # Administration de la clientèle
+├── admin_sdr.php                # Administration SDR
+├── admin_spi.php                # Administration SPI
+├── admin_commission_reception.php # Gestion des commissions
+│
+├── journal.php                  # Journal des opérations
+├── initialize_journal_admin.php # Initialisation admin journal
+├── delete_log.php               # Suppression sécurisée des logs
+│
+├── view_pdf.php                 # Visualisation de documents PDF
+├── serve_file.php               # Service de fichiers
+├── setup_users.php              # Configuration des utilisateurs
+├── supprimer_operation.php      # Suppression d'opérations
+│
+├── css/
+│   └── style.css                # Styles personnalisés
+├── js/                          # Scripts JavaScript
+├── includes/                    # Fichiers inclus (headers, footers, etc.)
+└── uploads/                     # Fichiers téléchargés (images, documents)
 ```
 
-## 🗄️ Base de données
+## 🚀 Installation
 
-Assurez-vous d'avoir une base de données MySQL créée avec le nom configuré dans vos variables d'environnement.
-
-### Importation du schéma
-
-Si vous avez un fichier SQL d'export :
-```bash
-mysql -u votre_utilisateur -p votre_db < schema.sql
-```
-
-## 📦 Prérequis
-
+### Prérequis
 - PHP 7.4 ou supérieur
-- MySQL 5.7 ou supérieur / MariaDB
-- Extension PDO MySQL pour PHP
-- Apache avec mod_rewrite (optionnel)
+- MySQL 5.7+ / MariaDB 10.3+ ou PostgreSQL 12+
+- Apache avec mod_rewrite activé (optionnel)
+- Extensions PHP : PDO, PDO_MySQL (ou PDO_PGSQL pour PostgreSQL), GD, ZIP
+
+### Installation Locale
+
+1. **Cloner le dépôt**
+   ```bash
+   git clone https://github.com/Nedim7050/FTTX-PROJECT.git
+   cd FTTX-PROJECT
+   ```
+
+2. **Configurer la base de données**
+   - Créez une base de données MySQL/PostgreSQL
+   - Importez le schéma de base de données si disponible
+   - Configurez les informations de connexion dans `database.php` ou via variables d'environnement
+
+3. **Configurer les variables d'environnement**
+   - Créez un fichier `.env` à la racine (basé sur `.env.example` si disponible)
+   - Configurez les variables suivantes :
+     ```
+     DB_HOST=127.0.0.1
+     DB_PORT=3306
+     DB_NAME=fttx_project
+     DB_USER=root
+     DB_PASSWORD=votre_mot_de_passe
+     APP_ENV=development
+     ```
+
+4. **Configurer les permissions**
+   - Assurez-vous que le dossier `uploads/` est accessible en écriture
+   ```bash
+   chmod -R 755 uploads/
+   ```
+
+5. **Initialiser les utilisateurs**
+   - Exécutez `setup_users.php` pour configurer les comptes utilisateurs initiaux
+
+## ⚙️ Configuration
+
+### Base de Données
+
+L'application supporte automatiquement MySQL et PostgreSQL. La détection se fait automatiquement selon le port configuré :
+- Port `3306` → MySQL
+- Port `5432` → PostgreSQL
+
+### Variables d'Environnement
+
+L'application utilise des variables d'environnement pour la configuration, permettant une flexibilité entre développement et production :
+
+| Variable | Description | Défaut |
+|----------|-------------|--------|
+| `DB_HOST` | Adresse du serveur de base de données | `127.0.0.1` |
+| `DB_PORT` | Port de la base de données | `3306` (MySQL) ou `5432` (PostgreSQL) |
+| `DB_NAME` | Nom de la base de données | `fttx_project` |
+| `DB_USER` | Utilisateur de la base de données | `root` |
+| `DB_PASSWORD` | Mot de passe de la base de données | (vide) |
+| `APP_ENV` | Environnement (development/production) | `development` |
 
 ## 🔒 Sécurité
 
-- Les fichiers `.env` sont exclus de Git
-- Les mots de passe ne doivent jamais être committés
-- Configurez HTTPS en production
-- Utilisez des mots de passe forts pour la base de données
+- **Connexions sécurisées** : Utilisation de PDO avec requêtes préparées pour prévenir les injections SQL
+- **Authentification** : Système de connexion avec gestion de sessions sécurisée
+- **Protection des fichiers sensibles** : Exclusion des fichiers `.env` via `.gitignore`
+- **Validation des entrées** : Validation et sanitization des données utilisateur
+- **Gestion des erreurs** : Messages d'erreur adaptés selon l'environnement (développement vs production)
 
-## 📝 Déploiement étape par étape sur Render.com
+## 📱 Interface Utilisateur
 
-### Étape 1 : Préparer le dépôt GitHub
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/Nedim7050/FTTX-PROJECT.git
-git push -u origin main
-```
+L'application propose une interface moderne et responsive :
+- Design responsive s'adaptant à tous les écrans (desktop, tablette, mobile)
+- Navigation intuitive avec menu de navigation clair
+- Animations CSS pour une meilleure expérience utilisateur
+- Interface cohérente avec la charte graphique Tunisie Télécom
 
-### Étape 2 : Créer un compte Render
-1. Allez sur [render.com](https://render.com)
-2. Inscrivez-vous avec votre compte GitHub
+## 🛠️ Développement
 
-### Étape 3 : Créer une base de données
-1. Dans le dashboard Render, cliquez sur "New +"
-2. Sélectionnez "PostgreSQL" ou "MySQL"
-3. Choisissez le plan gratuit
-4. Notez les informations de connexion
+### Structure MVC
+L'application suit une architecture MVC (Model-View-Controller) :
+- **Model** : `database.php` - Gestion des données
+- **View** : Fichiers PHP avec HTML/PHP mélangé
+- **Controller** : Logique métier dans chaque fichier PHP
 
-### Étape 4 : Créer le Web Service
-1. Cliquez sur "New +" > "Web Service"
-2. Connectez votre dépôt GitHub
-3. Sélectionnez le dépôt FTTX-PROJECT
-4. Configuration :
-   - **Name** : fttx-project
-   - **Environment** : PHP
-   - **Region** : Choix selon votre localisation
-   - **Branch** : main
-   - **Root Directory** : (laissez vide)
-   - **Build Command** : (laissez vide)
-   - **Start Command** : (laissez vide)
+### Contribution
+Pour contribuer au projet :
+1. Forkez le dépôt
+2. Créez une branche pour votre fonctionnalité (`git checkout -b feature/ma-fonctionnalite`)
+3. Committez vos changements (`git commit -m 'Ajout de ma fonctionnalité'`)
+4. Pushez vers la branche (`git push origin feature/ma-fonctionnalite`)
+5. Ouvrez une Pull Request
 
-### Étape 5 : Configurer les variables d'environnement
-Dans les paramètres du Web Service, ajoutez :
-```
-DB_HOST=votre-hote-de-render
-DB_PORT=3306 (ou 5432 pour PostgreSQL)
-DB_NAME=votre-nom-db
-DB_USER=votre-user-db
-DB_PASSWORD=votre-password-db
-APP_ENV=production
-```
+## 📞 Support et Contact
 
-### Étape 6 : Déployer
-1. Cliquez sur "Create Web Service"
-2. Render va automatiquement déployer votre application
-3. Attendez quelques minutes pour le déploiement
-4. Votre application sera accessible à l'URL fournie
-
-## 🛠️ Maintenance
-
-### Logs
-Les logs de l'application sont disponibles dans le dashboard de votre hébergeur cloud.
-
-### Mises à jour
-1. Faites vos modifications
-2. Committez et poussez vers GitHub
-3. Le déploiement se fera automatiquement (si configuré)
-
-## 📞 Support
-
-Pour toute question ou problème, créez une issue sur GitHub.
+Pour toute question, suggestion ou problème :
+- Créez une issue sur [GitHub](https://github.com/Nedim7050/FTTX-PROJECT/issues)
+- Contactez l'équipe de développement du Centre Urbain Nord
 
 ## 📄 Licence
 
-Ce projet est la propriété de Tunisie Télécom.
+Ce projet est la propriété exclusive de **Tunisie Télécom** et est destiné à un usage interne.
 
 ---
 
-**Développé pour le Centre Urbain Nord de Tunis - Tunisie Télécom**
+**Développé avec ❤️ pour le Centre Urbain Nord de Tunis - Tunisie Télécom**
 
+© 2024 Tunisie Télécom. Tous droits réservés.

